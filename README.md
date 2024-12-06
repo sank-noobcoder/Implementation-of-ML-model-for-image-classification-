@@ -16,7 +16,7 @@ Welcome to the **Image Classification with Machine Learning** project! This web 
 
 ## 🛠️ Technologies Used
 
-- **Frontend**: HTML5, CSS3 (Responsive UI)
+- **Frontend**: HTML, CSS3 (Responsive UI)
 - **Backend**: Python (Flask, TensorFlow/Keras)
 - **Pre-trained Models**: MobileNetV2
 - **Deployment**: Can be deployed locally or on the cloud.
