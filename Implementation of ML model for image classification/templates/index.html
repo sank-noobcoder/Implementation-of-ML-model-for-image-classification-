@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered tool for image classification and human detection using MobileNetV2.">
+    <meta name="keywords" content="Image Classification, AI, Human Detection, , MobileNetV2, Flask">
+    <meta name="author" content="Your Name">
+    <title>Image Classification</title>
+   
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 20px;
+            overflow-y: hidden;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        input[type="file"],
+        select,
+        button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 15px 0 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .footer {
+            margin-top: 370px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+            max-width: 1000000000000%;
+        }
+      
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            button {
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>AI Image Classification</h1>
+        <p>Upload an image to classify its content.</p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="file">Upload Image:</label>
+            <input type="file" name="file" id="file" required><br>
+            
+            <label for="model_choice">Choose Model:</label>
+            <select name="model_choice" id="model_choice" required>
+                <option value="">Choose a Model</option>
+                <option value="mobilenetv2">MobileNetV2</option>
+                <option value="gender">Gender Classification</option>
+            </select><br>
+
+            <button type="submit">Upload</button>
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+
+    <p style="font-size:12px; color:#808080;">©2024 Project by Sanket Ghorai Made With ❤️</p>'
+    
+</body>
+</html>
+
+</body>
+</html>
